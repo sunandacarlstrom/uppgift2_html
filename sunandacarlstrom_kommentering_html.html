@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!-- Första raden av kod som krävs för att skriva ett HTML-dokument och är en instruktion till webbläsaren om vilken version av HTML som sidan är skriven i -->
+
+<html lang="sv">
+<!-- Skriver ut vilket språk man använder i sin kod -->
+
+<head>
+  <!-- Här börjar elementet <head> och är en kontainer för följande element -->
+  <meta charset="utf-8">
+  <!-- innehåller metadata (beskrivning) som berättar för webbläsaren vad för typ av kontent som webbsidan innehåller owebbläsarench att  ska använda utf-8 som är en specifik teckenkodning när man översätter maskinspråk till människospråk.  -->
+  <title>Exempel 1</title> <!-- Här namnges sidan till "Exempel 1", detta synliggörs även i fliken på webbläsaren -->
+</head> <!-- Här avslutas elementet <head> -->
+<style>
+  /* Allt inom style tolkas som CSS kod och kommenteras såhär */
+  h1 {
+    /* Här stylear man "Ruibrik 1" */
+    text-align: center;
+    /* justerar placeringen av texten, i detta fallet vill man centrera rubriken */
+    font-size: 300%;
+    /* ändrar typsnittstorleken, i detta fallet vill man att rubriken ska vara dynamisk beroende på hur stor skärmen är genom att ange procent istället för antal pixlar */
+  }
+
+  #myHeader {
+    /* Här stylear man ett unikt ID, i detta fall som heter myHeader */
+    background-color: lightblue;
+    /* ändrar färgen på bakgrunden, i detta fall till ljusblått */
+    color: black;
+    /* ändrar text-färgen, i detta fall till svart */
+    padding: 40px;
+    /* lägger till utfyllnad till elementet dvs storleken på utrymmet mellan dess innehåll och dess kant */
+    text-align: left;
+    /* justerar placeringen av texten, i detta fall till vänster */
+  }
+
+  table {
+    /* Här stylear man en tabell */
+    font-family: arial, sans-serif;
+    /* ändrar typsnittet som används i tabellen, i detta fall används ett typsnitt av San-Serif som heter Arial */
+    border-collapse: collapse;
+    /* sammanfogar två kolumner i tabellen */
+    width: 100%;
+    /* ändrar bredd-storleken på tabellen */
+  }
+
+  td,
+  /* Definerar dataceller i en tabell */
+  th {
+    /* Här stylear man dataceller i en tabell som innehåller "Huvud"-information */
+    border: 1px solid #dddddd;
+    /* skapar en ram runt datacellerna och sätter färgen till ljusgrått */
+    text-align: left;
+    /* justerar placeringen av texten, i detta fall till vänster */
+    padding: 8px;
+    /* lägger till utfyllnad till elementet dvs storleken på utrymmet mellan dess innehåll och dess kant */
+  }
+
+  tr:nth-child(even) {
+    /* används för att välja specifka (men likadana) element, i detta fall elementet <tr> ska få styling med css men endast de "jämna" elementen. Skulle de stå "odd" istället, skulle styling läggas på alla "ojämna" element */
+
+    background-color: #dddddd;
+    /* sätter backgrundsfärgen till ljusgrått */
+  }
+</style> <!-- Här avslutas CSS kod, och återgår till HTML -->
+
+<body>
+  <!-- Här börjar elementet <body> och innehåller all kontext som finns i ett HTML dokument såsom rubriker, paragrafer, bilder, länkar, tabeller osv. -->
+
+  <h1>Att kommentera koden</h1> <!-- Detta är en standardrubrik av "Rubrik 1" dvs huvudrubrik -->
+  <h2>Du ska i denna uppgift kommentera koden till denna sidan.</h2>
+  <!-- Detta är standardrubrik av "Rubrik 2" dvs rubrik med något mindre typsnittsstorlek än "Rubrik 1" -->
+  <h3>Det är viktigt att du är tydlig i din beskrivning så det är lätt för alla att förstå vad du menar.</h3>
+  <!-- Detta är standardrubrik av "Rubrik 3" dvs rubrik med något mindre typsnittsstorlek än "Rubrik 2" -->
+
+  <p>Det är viktigt att vara kommunikativ så slipper vi en massa missförstånd.
+    <!--  Här börjar en paragraf och används för att dela in text i stycken -->
+    <br> <!-- Detta är en radbrytare som ligger inom paragrafen-->
+
+    Det här är <strong>lite mer text</strong> på en ny rad.
+    <!-- Här vill man märka ut vissa ord genom att göra den fetstilt -->
+
+  <p id="myHeader">Ibland vill man dela upp texten för att den ska bli lättare att läsa och kanske förstärka vissa saker
+    som är viktiga!</p> <!-- en paragraf med ett unikt ID -->
+  <br> <!-- Detta är en radbrytare som ligger mellan två paragrafer och därmed separerar dem -->
+  <p>För att underlätta för läsare kan det vara bra att dela upp information:</p> <!-- Ytterligare en paragraf -->
+
+  <ol>
+    <!-- Inom paragrafen har man använt en sk. 'Ordered list' som numrerar en lista, och denna börjar härifrån -->
+    <li>Första - det är viktigt att vi tänker på vem som ska ha användning för vår sida när vi skriver den.</li>
+    <!-- för varje punkt i listan krävs <li> tag -->
+    <li>Andra - så är användningen av olika färger viktigt för att användaren tydligt ska se det den behöver.</li>
+    <li>Tredje - ger vi förmycket information på en gång kan det bli svårt att hitta den info man söker.</li>
+  </ol> <!-- Här avslutas den numeriska listan -->
+
+  <ul>
+    <!-- Inom paragrafen har man också använt en sk. 'Unordered list' som punktar en lista, och denna börjar härifrån -->
+    <lh>
+      <!-- Detta är ett listhuvudelement och används för att tillhandahålla en titel för en lista -->
+      <h2>Bra länkar</h2>
+      <!-- Detta är standardrubrik av "Rubrik 2" dvs rubrik med något mindre typsnittsstorlek än "Rubrik 1" -->
+    </lh> <!-- Här avslutas listhuvudelementet -->
+    <li><a href="https://validator.w3.org/">Validering av kod.</a> När vi programmerat html så kan vi gå in på w3Cs
+      hemsida och validera den så vi inte gjort några missar.</li>
+    <!-- för varje punkt i listan krävs <li> tag, i detta fall har man även skrivit <a> tag som indikerar på ett attribut där man hänvisar till en extern sida -->
+    <li><a href="https://www.arkitektkopia.se/akademi/stark-budskapet-med-komplementfarger/">Komplementfärger</a>
+      hjälper oss så att det vi vill ha fram blir tydligare.</li>
+  </ul>
+
+  <table>
+    <!-- Skapar en tabell -->
+    <tr>
+      <!--- Här skapas en rad med celler i en tabell -->
+      <th>Andra sätt att dela upp information</th>
+      <!--- Detta är en huvudcell och används för att tillhandahålla en titel för en tabell -->
+      <th>För att det ska bli lättare att hitta</th>
+    </tr> <!-- Här avslutas raden med celler -->
+    <tr>
+      <!-- Här skapas en ny rad med celler -->
+      <td>data1</td> <!-- skapar en datacell -->
+      <td>data2</td> <!-- skapar en till datacell -->
+    </tr> <!-- Här avslutas raden med celler -->
+    <tr>
+      <!-- Här skapas ytterligare en ny rad med celler -->
+      <td>data3</td> <!-- skapar en datacell -->
+      <td>data4</td> <!-- skapar en till datacell -->
+    </tr> <!-- Här avslutas raden med celler -->
+  </table> <!-- Här avslutas tabellen -->
+
+  <img src="tradgard1.jfif" alt="trädgård" width="400">
+  <!-- Här lägger man till en bild som finns lokalt på datorn genom att ange källan dvs. bildens fullständiga namn. I detta fallet har man också valt att lägga till en alternativ text ifall bilden inte skulle kunna läsas in av någon anledning samt bestämt breddstorleken på bilden -->
+  <img src="https://kampanj.expressen.se/ikea/wp-content/uploads/2021/12/v1.jpg" alt="sovrum" width="250">
+  <!-- Här lägger man till en till bild men som finns på nätet genom att ange källan dvs. bildens fullständiga adress. I detta fallet har man också valt att lägga till en alternativ text ifall bilden inte skulle kunna läsas in av någon anledning samt bestämt breddstorleken på bilden -->
+
+  <form>
+    <!-- Här skapas ett formulär -->
+    First name: <input type="text" name="fname"><br>
+    <!-- <input> tag ber användaren att skriva in något, i detta fall sitt förnamn. Följs av ett radbryt -->
+    Last name:<input type="text" name="lname"><br>
+    <!-- <input> tag ber användaren att skriva in något, i detta fall sitt efternamn. Följs av ett radbryt -->
+    <select>
+      <!-- Här skapas en väljare -->
+      <option value="volvo">Volvo</Option> <!-- Här anges ett val -->
+      <option value="saab">Saab</Option> <!-- Här anges ett annat val -->
+    </select> <!-- Här avslutas väljaren -->
+    <input type="submit" value="Knapp"> <!-- Här skaps en knapp som användaren uppmanas att trycka på -->
+  </form> <!-- Här avslutas formuläret -->
+
+</body> <!-- Här avslutas elementet <body> och dess innehåll -->
+
+</html> <!-- Här slutar sidan -->
